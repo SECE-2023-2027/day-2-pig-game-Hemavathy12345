@@ -16,7 +16,11 @@ let activePlayer=0;
 let playing=true;
 function switchPlayer(){
     currentScore=0;
-    activePlayer=activePlayer===0?1:0;
+    switch(activePlayer){
+        case 0:
+            activePlayer=1; break;
+        default: activePlayer=0;break;
+    }
     player0Current.textContent=0;
     player1Current.textContent=0;
     player0.classList.toggle('active');
